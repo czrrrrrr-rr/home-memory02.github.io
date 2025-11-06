@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Memories - 这里存储着你的美好时光</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container Wrapper -->
+    <div class="app-wrapper">
+        
+        <!-- Home Page Container -->
+        <div class="page active" data-page="home">
+            <div class="home-page__background"></div>
+            <div class="home-page__content">
+                <h1 class="home-page__title">这里存储着你的美好时光</h1>
+                <div class="home-page__icon-container">
+                    <img src="imgs/icon/initial_door.jpg" alt="Home Door" class="home-page__icon" id="doorImage">
+                </div>
+                <button class="home-page__button" type="button">点击进入</button>
+            </div>
+        </div>
+
+        <!-- Room Selection Page Container -->
+        <div class="page" data-page="rooms">
+            <div class="rooms-page">
+                <!-- Top Navigation -->
+                <nav class="rooms-page__navigation">
+                    <div class="rooms-page__logo">Home Memories</div>
+                    <button class="rooms-page__back-button" type="button">返回</button>
+                </nav>
+
+                <!-- Room Cards Grid -->
+                <div class="rooms-page__grid">
+                    <!-- Living Room Card -->
+                    <div class="room-card" data-room="living-room" data-room-name="客厅" data-room-name-en="Living Room">
+                        <div class="room-card__icon-container">
+                            <img src="imgs/icon/living-room_icon.jpg" alt="Living Room" class="room-card__icon">
+                        </div>
+                        <h3 class="room-card__name">客厅</h3>
+                        <p class="room-card__name-en">Living Room</p>
+                        <p class="room-card__description">温馨的家庭聚会空间</p>
+                    </div>
+
+                    <!-- Bedroom Card -->
+                    <div class="room-card" data-room="bedroom" data-room-name="卧室" data-room-name-en="Bedroom">
+                        <div class="room-card__icon-container">
+                            <img src="imgs/icon/bedroom_icon.jpg" alt="Bedroom" class="room-card__icon">
+                        </div>
+                        <h3 class="room-card__name">卧室</h3>
+                        <p class="room-card__name-en">Bedroom</p>
+                        <p class="room-card__description">私密舒适的休息空间</p>
+                    </div>
+
+                    <!-- Balcony Card -->
+                    <div class="room-card" data-room="balcony" data-room-name="阳台" data-room-name-en="Balcony">
+                        <div class="room-card__icon-container">
+                            <img src="imgs/icon/balcony_icon.jpg" alt="Balcony" class="room-card__icon">
+                        </div>
+                        <h3 class="room-card__name">阳台</h3>
+                        <p class="room-card__name-en">Balcony</p>
+                        <p class="room-card__description">享受阳光与清新的空间</p>
+                    </div>
+
+                    <!-- Study Card -->
+                    <div class="room-card" data-room="study" data-room-name="书房" data-room-name-en="Study">
+                        <div class="room-card__icon-container">
+                            <img src="imgs/icon/study_icon.jpg" alt="Study" class="room-card__icon">
+                        </div>
+                        <h3 class="room-card__name">书房</h3>
+                        <p class="room-card__name-en">Study</p>
+                        <p class="room-card__description">安静思考学习的空间</p>
+                    </div>
+
+                    <!-- Room Card -->
+                    <div class="room-card" data-room="room" data-room-name="房间" data-room-name-en="Room">
+                        <div class="room-card__icon-container">
+                            <img src="imgs/icon/room_icon.jpg" alt="Room" class="room-card__icon">
+                        </div>
+                        <h3 class="room-card__name">房间</h3>
+                        <p class="room-card__name-en">Room</p>
+                        <p class="room-card__description">温馨舒适的个人空间</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Room Detail Page Container -->
+        <div class="page" data-page="detail">
+            <div class="detail-page">
+                <!-- Top Navigation -->
+                <nav class="detail-page__navigation">
+                    <button class="detail-page__back-button" type="button">返回</button>
+                    <h2 class="detail-page__title">客厅</h2>
+                    <button class="detail-page__album-button" type="button">相册</button>
+                </nav>
+
+                <!-- Background Image Display Area (Two Layers for Cross-Fade) -->
+                <div class="detail-page__background-container">
+                    <div class="detail-page__background detail-page__background--layer-1">
+                        <img src="imgs/bg/bedroom/bedroom_bg1.jpg" alt="Room Background 1" class="detail-page__background-image">
+                    </div>
+                    <div class="detail-page__background detail-page__background--layer-2">
+                        <img src="imgs/bg/bedroom/bedroom_bg2.jpg" alt="Room Background 2" class="detail-page__background-image">
+                    </div>
+                </div>
+
+                <!-- Bottom Timeline Area -->
+                <div class="detail-page__timeline">
+                    <div class="timeline">
+                        <!-- Track Line -->
+                        <div class="timeline__track"></div>
+
+                        <!-- Timeline Nodes -->
+                        <div class="timeline__node timeline__node--start">
+                            <div class="timeline__node-marker"></div>
+                            <div class="timeline__node-label">
+                                <span class="timeline__node-text">我们的家</span>
+                                <span class="timeline__node-text-en">Our Home</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline__node timeline__node--end">
+                            <div class="timeline__node-marker"></div>
+                            <div class="timeline__node-label">
+                                <span class="timeline__node-text">那年今日</span>
+                                <span class="timeline__node-text-en">That Year Today</span>
+                            </div>
+                        </div>
+
+                        <!-- Draggable Slider -->
+                        <div class="timeline__slider">
+                            <div class="timeline__slider-handle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Album Modal -->
+    <div class="album-modal" id="albumModal">
+        <div class="album-backdrop"></div>
+        <div class="album-container">
+            <header class="album-header">
+                <h2 class="album-room-name">客厅</h2>
+                <button class="album-close" type="button" aria-label="Close Album">&times;</button>
+            </header>
+            <div class="photo-grid" id="photoGrid">
+                <!-- Photos will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-backdrop"></div>
+        <button class="lightbox-close" type="button" aria-label="Close Lightbox">&times;</button>
+        <button class="lightbox-prev" type="button" aria-label="Previous Photo">&larr;</button>
+        <button class="lightbox-next" type="button" aria-label="Next Photo">&rarr;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+        </div>
+        <div class="lightbox-counter">
+            <span class="lightbox-current-index">1</span> / <span class="lightbox-total-photos">6</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
