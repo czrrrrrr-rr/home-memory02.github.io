@@ -2,6 +2,24 @@
 // Page Navigation System
 // ============================================
 
+const homeExperienceElement = document.getElementById('homeExperience');
+const customCursor = document.getElementById('customCursor');
+
+function toggleHomeExperience(isActive) {
+    if (!homeExperienceElement) return;
+    if (isActive) {
+        homeExperienceElement.classList.remove('home-experience--inactive');
+        if (customCursor) {
+            customCursor.style.opacity = 0;
+        }
+    } else {
+        homeExperienceElement.classList.add('home-experience--inactive');
+        if (customCursor) {
+            customCursor.style.opacity = 0;
+        }
+    }
+}
+
 /**
  * Navigate to a specific page
  * @param {string} pageName - The name of the page to navigate to
@@ -19,6 +37,7 @@ function navigateToPage(pageName) {
     const targetPage = document.querySelector(`[data-page="${pageName}"]`);
     if (targetPage) {
         targetPage.classList.add('active');
+        toggleHomeExperience(pageName === 'home');
         
         // Update countdown progress when navigating to rooms page
         if (pageName === 'rooms') {
@@ -37,6 +56,32 @@ function navigateToPage(pageName) {
 }
 
 // ============================================
+// Detail Page Inspiration Reveals
+// ============================================
+
+function setupDetailReveals() {
+    const triggers = document.querySelectorAll('[data-reveal-trigger]');
+
+    triggers.forEach(trigger => {
+        const revealId = trigger.getAttribute('data-reveal-trigger');
+        if (!revealId) return;
+
+        const panel = document.querySelector(`[data-reveal-panel="${revealId}"]`);
+        if (!panel) return;
+
+        panel.classList.remove('detail-reveal__panel--visible');
+        panel.setAttribute('aria-hidden', 'true');
+        trigger.setAttribute('aria-expanded', 'false');
+
+        trigger.addEventListener('click', () => {
+            const isVisible = panel.classList.toggle('detail-reveal__panel--visible');
+            panel.setAttribute('aria-hidden', (!isVisible).toString());
+            trigger.setAttribute('aria-expanded', isVisible.toString());
+        });
+    });
+}
+
+// ============================================
 // Home Page Navigation
 // ============================================
 
@@ -44,14 +89,6 @@ function navigateToPage(pageName) {
 const homePageButton = document.querySelector('.home-page__button');
 if (homePageButton) {
     homePageButton.addEventListener('click', () => {
-        navigateToPage('rooms');
-    });
-}
-
-// Handle click on home page icon (door image)
-const doorImage = document.getElementById('doorImage');
-if (doorImage) {
-    doorImage.addEventListener('click', () => {
         navigateToPage('rooms');
     });
 }
@@ -537,6 +574,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Update countdown progress ring
     updateCountdownProgress();
+
+    // Initialize detail page inspiration reveals
+    setupDetailReveals();
     
     // Add any initialization code here
     console.log('Home Memories app initialized');

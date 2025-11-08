@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Memories - 这里存储着你的美好时光</title>
+    <title>WELCOME, HOME</title>
     <!-- Google Fonts - Slab Serif 字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -153,12 +153,12 @@
                     <!-- Room Card -->
                     <div class="room-card room-card--room" data-room="room" data-room-name="房间" data-room-name-en="Room">
                         <div class="room-card__icon-container">
-                            <span class="room-card__emoji">🧸</span>
-                            <img src="imgs/icon/room_icon.jpg" alt="Room" class="room-card__icon">
+                            <span class="room-card__emd__icon">
                             <div class="room-card__gradient-overlay room-card__gradient-overlay--room"></div>
                         </div>
                         <div class="room-card__content">
-                            <h3 class="room-card__name">房间</h3>
+                            <h3 class="room-card__name">房间</h3>oji">🧸</span>
+                            <img src="imgs/icon/room_icon.jpg" alt="Room" class="room-car
                             <p class="room-card__name-en">Room</p>
                             <p class="room-card__description">温馨舒适的个人空间</p>
                         </div>
@@ -172,50 +172,77 @@
 
         <!-- Living Room Detail Page Container -->
         <div class="page" data-page="detail-living-room">
-            <div class="detail-page">
+            <div class="detail-page detail-page--reveal" data-detail="living-room">
                 <!-- Top Navigation -->
                 <nav class="detail-page__navigation">
                     <button class="detail-page__back-button" type="button">返回</button>
                     <h2 class="detail-page__title">客厅</h2>
                 </nav>
 
-                <!-- Background Image Display Area (Two Layers for Cross-Fade) -->
-                <div class="detail-page__background-container">
-                    <div class="detail-page__background detail-page__background--layer-1">
-                        <img src="imgs/bg/living-room/living-room_bg1.jpg" alt="Living Room Background 1" class="detail-page__background-image">
+                <!-- Living Room Spotlight -->
+                <div class="detail-reveal">
+                    <div class="detail-reveal__image-wrapper">
+                        <img src="imgs/bg/living-room/living-room_bg1.jpg" alt="客厅灵感" class="detail-reveal__image">
+                        <div class="detail-reveal__image-overlay">
+                            <span class="detail-reveal__badge">Living Room Oasis</span>
+                            <span class="detail-reveal__tagline">夕阳与笑声的交汇点</span>
+                        </div>
                     </div>
-                    <div class="detail-page__background detail-page__background--layer-2">
-                        <img src="imgs/bg/living-room/living-room_bg2.jpg" alt="Living Room Background 2" class="detail-page__background-image">
-                    </div>
+                    <button class="detail-reveal__action-button" type="button" data-reveal-trigger="living-room" aria-expanded="false">一键入住</button>
                 </div>
-
-                <!-- Bottom Timeline Area -->
-                <div class="detail-page__timeline">
-                    <div class="timeline">
-                        <!-- Track Line -->
-                        <div class="timeline__track"></div>
-
-                        <!-- Timeline Nodes -->
-                        <div class="timeline__node timeline__node--start">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">我们的家</span>
-                                <span class="timeline__node-text-en">Our Home</span>
+                
+                <!-- Living Room Inspiration Reveal -->
+                <div class="detail-reveal__panel detail-reveal__panel--featured" data-reveal-panel="living-room" aria-hidden="true">
+                    <div class="detail-reveal__content">
+                        <span class="detail-reveal__eyebrow">Home Mood · 温柔明亮</span>
+                        <p class="detail-reveal__prompt">明年今天，我在....？</p>
+                        <p class="detail-reveal__description">窗帘随风摇曳，香薰与咖啡交织，家人笑声在柔软的沙发上碰撞。生活在这里不必刻意营造，只需让光与心情自由流动。</p>
+                        <div class="detail-reveal__stats">
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🌇</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">最佳光影</span>
+                                    <span class="detail-reveal__stat-value">17:30 · 西南角</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🎧</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">氛围歌单</span>
+                                    <span class="detail-reveal__stat-value">Bossa Nova · 轻声细语</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🕯️</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">气味记忆</span>
+                                    <span class="detail-reveal__stat-value">无花果 × 广藿香</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="timeline__node timeline__node--end">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">那年今日</span>
-                                <span class="timeline__node-text-en">enjoy the time together</span>
-                            </div>
+                        <ul class="detail-reveal__list">
+                            <li>落地窗边的阅读角落，配上一盏暖色落地灯</li>
+                            <li>家人一起围坐的长茶几，留给棋盘与甜点的位置</li>
+                            <li>墙面相框组成的家族故事墙，记录每一次团聚</li>
+                        </ul>
+                        <div class="detail-reveal__cta">
+                            <button class="detail-reveal__cta-button" type="button">收藏灵感方案</button>
+                            <button class="detail-reveal__cta-link" type="button">查看客厅相册</button>
                         </div>
-
-                        <!-- Draggable Slider -->
-                        <div class="timeline__slider">
-                            <div class="timeline__slider-handle"></div>
-                        </div>
+                    </div>
+                    <div class="detail-reveal__gallery detail-reveal__gallery--primary">
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/living-room/picture1.jpg" alt="客厅落地窗阅读角">
+                            <figcaption class="detail-reveal__caption">午后光影</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/living-room/picture2.jpg" alt="客厅沙发与茶几布置">
+                            <figcaption class="detail-reveal__caption">柔软沙发</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/living-room/picture3.jpg" alt="墙面照片墙细节">
+                            <figcaption class="detail-reveal__caption">故事墙面</figcaption>
+                        </figure>
                     </div>
                 </div>
                 
@@ -226,50 +253,77 @@
 
         <!-- Bedroom Detail Page Container -->
         <div class="page" data-page="detail-bedroom">
-            <div class="detail-page">
+            <div class="detail-page detail-page--reveal" data-detail="bedroom">
                 <!-- Top Navigation -->
                 <nav class="detail-page__navigation">
                     <button class="detail-page__back-button" type="button">返回</button>
                     <h2 class="detail-page__title">卧室</h2>
                 </nav>
 
-                <!-- Background Image Display Area (Two Layers for Cross-Fade) -->
-                <div class="detail-page__background-container">
-                    <div class="detail-page__background detail-page__background--layer-1">
-                        <img src="imgs/bg/bedroom/bedroom_bg1.jpg" alt="Bedroom Background 1" class="detail-page__background-image">
+                <!-- Bedroom Spotlight -->
+                <div class="detail-reveal">
+                    <div class="detail-reveal__image-wrapper">
+                        <img src="imgs/bg/bedroom/bedroom_bg1.jpg" alt="卧室灵感" class="detail-reveal__image">
+                        <div class="detail-reveal__image-overlay">
+                            <span class="detail-reveal__badge">Bedroom Retreat</span>
+                            <span class="detail-reveal__tagline">在柔软月光里安心入眠</span>
+                        </div>
                     </div>
-                    <div class="detail-page__background detail-page__background--layer-2">
-                        <img src="imgs/bg/bedroom/bedroom_bg2.jpg" alt="Bedroom Background 2" class="detail-page__background-image">
-                    </div>
+                    <button class="detail-reveal__action-button" type="button" data-reveal-trigger="bedroom" aria-expanded="false">一键入住</button>
                 </div>
-
-                <!-- Bottom Timeline Area -->
-                <div class="detail-page__timeline">
-                    <div class="timeline">
-                        <!-- Track Line -->
-                        <div class="timeline__track"></div>
-
-                        <!-- Timeline Nodes -->
-                        <div class="timeline__node timeline__node--start">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">我们的家</span>
-                                <span class="timeline__node-text-en">Our Home</span>
+                
+                <!-- Bedroom Inspiration Reveal -->
+                <div class="detail-reveal__panel detail-reveal__panel--featured" data-reveal-panel="bedroom" aria-hidden="true">
+                    <div class="detail-reveal__content">
+                        <span class="detail-reveal__eyebrow">Night Ritual · 静谧安睡</span>
+                        <p class="detail-reveal__prompt">明年今天，我在....？</p>
+                        <p class="detail-reveal__description">被柔软床品拥抱，窗纱被夜风轻轻吹拂，香氛与白噪音让睡眠成为仪式。卧室的每一处，都为舒缓身心而存在。</p>
+                        <div class="detail-reveal__stats">
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🌙</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">睡眠光线</span>
+                                    <span class="detail-reveal__stat-value">21:45 · 雾面暖光 25%</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🎵</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">眠前旋律</span>
+                                    <span class="detail-reveal__stat-value">Lo-fi Slow · 45min</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🛏️</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">舒适指数</span>
+                                    <span class="detail-reveal__stat-value">羽绒 × 天丝床单</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="timeline__node timeline__node--end">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">畅享时光</span>
-                                <span class="timeline__node-text-en">Enjoy the Time Together</span>
-                            </div>
+                        <ul class="detail-reveal__list">
+                            <li>床尾长凳与编织毛毯，让睡前仪式更温柔</li>
+                            <li>床头双层灯光，阅读与休息随心切换</li>
+                            <li>衣柜香氛抽屉，醒来即可穿上心情</li>
+                        </ul>
+                        <div class="detail-reveal__cta">
+                            <button class="detail-reveal__cta-button" type="button">保存卧室布置</button>
+                            <button class="detail-reveal__cta-link" type="button">查看卧室相册</button>
                         </div>
-
-                        <!-- Draggable Slider -->
-                        <div class="timeline__slider">
-                            <div class="timeline__slider-handle"></div>
-                        </div>
+                    </div>
+                    <div class="detail-reveal__gallery detail-reveal__gallery--primary">
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/bedroom/picture1.jpg" alt="卧室床品与抱枕">
+                            <figcaption class="detail-reveal__caption">柔软层次</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/bedroom/picture2.jpg" alt="床头灯光与夜读角">
+                            <figcaption class="detail-reveal__caption">温柔灯光</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/bedroom/picture3.jpg" alt="卧室衣柜与香氛摆件">
+                            <figcaption class="detail-reveal__caption">香气衣橱</figcaption>
+                        </figure>
                     </div>
                 </div>
                 
@@ -280,50 +334,77 @@
 
         <!-- Balcony Detail Page Container -->
         <div class="page" data-page="detail-balcony">
-            <div class="detail-page">
+            <div class="detail-page detail-page--reveal" data-detail="balcony">
                 <!-- Top Navigation -->
                 <nav class="detail-page__navigation">
                     <button class="detail-page__back-button" type="button">返回</button>
                     <h2 class="detail-page__title">阳台</h2>
                 </nav>
 
-                <!-- Background Image Display Area (Two Layers for Cross-Fade) -->
-                <div class="detail-page__background-container">
-                    <div class="detail-page__background detail-page__background--layer-1">
-                        <img src="imgs/bg/balcony/balcony_bg1.jpg" alt="Balcony Background 1" class="detail-page__background-image">
+                <!-- Balcony Spotlight -->
+                <div class="detail-reveal">
+                    <div class="detail-reveal__image-wrapper">
+                        <img src="imgs/bg/balcony/balcony_bg1.jpg" alt="阳台灵感" class="detail-reveal__image">
+                        <div class="detail-reveal__image-overlay">
+                            <span class="detail-reveal__badge">Balcony Garden</span>
+                            <span class="detail-reveal__tagline">晨光与绿意的呼吸角</span>
+                        </div>
                     </div>
-                    <div class="detail-page__background detail-page__background--layer-2">
-                        <img src="imgs/bg/balcony/balcony_bg2.jpg" alt="Balcony Background 2" class="detail-page__background-image">
-                    </div>
+                    <button class="detail-reveal__action-button" type="button" data-reveal-trigger="balcony" aria-expanded="false">一键入住</button>
                 </div>
-
-                <!-- Bottom Timeline Area -->
-                <div class="detail-page__timeline">
-                    <div class="timeline">
-                        <!-- Track Line -->
-                        <div class="timeline__track"></div>
-
-                        <!-- Timeline Nodes -->
-                        <div class="timeline__node timeline__node--start">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">我们的家</span>
-                                <span class="timeline__node-text-en">Our Home</span>
+                
+                <!-- Balcony Inspiration Reveal -->
+                <div class="detail-reveal__panel detail-reveal__panel--featured" data-reveal-panel="balcony" aria-hidden="true">
+                    <div class="detail-reveal__content">
+                        <span class="detail-reveal__eyebrow">Morning Bloom · 清新透亮</span>
+                        <p class="detail-reveal__prompt">明年今天，我在....？</p>
+                        <p class="detail-reveal__description">阳光顺着叶片滑落，晨风为咖啡增添清爽气息。这里是植物、餐点与微风相遇的小宇宙，属于家人共享的晨间仪式。</p>
+                        <div class="detail-reveal__stats">
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🌤️</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">最佳时刻</span>
+                                    <span class="detail-reveal__stat-value">07:20 · 东向第一缕光</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🌿</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">绿植伙伴</span>
+                                    <span class="detail-reveal__stat-value">琴叶榕 × 香草盆栽</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">☕</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">晨间菜单</span>
+                                    <span class="detail-reveal__stat-value">燕麦拿铁 + 柠檬水</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="timeline__node timeline__node--end">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">畅享时光</span>
-                                <span class="timeline__node-text-en">Enjoy the Time Together</span>
-                            </div>
+                        <ul class="detail-reveal__list">
+                            <li>铺上一块户外地毯，赤脚感受晨光温度</li>
+                            <li>折叠桌面随时展开，一杯咖啡、一份早餐</li>
+                            <li>串灯与小夜灯，让夜晚也能静赏城市星光</li>
+                        </ul>
+                        <div class="detail-reveal__cta">
+                            <button class="detail-reveal__cta-button" type="button">布置阳台花园</button>
+                            <button class="detail-reveal__cta-link" type="button">查看阳台相册</button>
                         </div>
-
-                        <!-- Draggable Slider -->
-                        <div class="timeline__slider">
-                            <div class="timeline__slider-handle"></div>
-                        </div>
+                    </div>
+                    <div class="detail-reveal__gallery detail-reveal__gallery--primary">
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/balcony/picture1.jpg" alt="阳台绿植与阳光">
+                            <figcaption class="detail-reveal__caption">晨光植语</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/balcony/picture2.jpg" alt="阳台咖啡与早餐">
+                            <figcaption class="detail-reveal__caption">早餐微风</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/balcony/picture3.jpg" alt="傍晚阳台灯光">
+                            <figcaption class="detail-reveal__caption">夜幕小灯</figcaption>
+                        </figure>
                     </div>
                 </div>
                 
@@ -334,50 +415,77 @@
 
         <!-- Study Detail Page Container -->
         <div class="page" data-page="detail-study">
-            <div class="detail-page">
+            <div class="detail-page detail-page--reveal" data-detail="study">
                 <!-- Top Navigation -->
                 <nav class="detail-page__navigation">
                     <button class="detail-page__back-button" type="button">返回</button>
                     <h2 class="detail-page__title">书房</h2>
                 </nav>
 
-                <!-- Background Image Display Area (Two Layers for Cross-Fade) -->
-                <div class="detail-page__background-container">
-                    <div class="detail-page__background detail-page__background--layer-1">
-                        <img src="imgs/bg/study/study_bg1.jpg" alt="Study Background 1" class="detail-page__background-image">
+                <!-- Study Spotlight -->
+                <div class="detail-reveal">
+                    <div class="detail-reveal__image-wrapper">
+                        <img src="imgs/bg/study/study_bg1.jpg" alt="书房灵感" class="detail-reveal__image">
+                        <div class="detail-reveal__image-overlay">
+                            <span class="detail-reveal__badge">Study Studio</span>
+                            <span class="detail-reveal__tagline">灵感与专注在此交汇</span>
+                        </div>
                     </div>
-                    <div class="detail-page__background detail-page__background--layer-2">
-                        <img src="imgs/bg/study/study_bg2.jpg" alt="Study Background 2" class="detail-page__background-image">
-                    </div>
+                    <button class="detail-reveal__action-button" type="button" data-reveal-trigger="study" aria-expanded="false">一键入住</button>
                 </div>
-
-                <!-- Bottom Timeline Area -->
-                <div class="detail-page__timeline">
-                    <div class="timeline">
-                        <!-- Track Line -->
-                        <div class="timeline__track"></div>
-
-                        <!-- Timeline Nodes -->
-                        <div class="timeline__node timeline__node--start">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">我们的家</span>
-                                <span class="timeline__node-text-en">Our Home</span>
+                
+                <!-- Study Inspiration Reveal -->
+                <div class="detail-reveal__panel detail-reveal__panel--featured" data-reveal-panel="study" aria-hidden="true">
+                    <div class="detail-reveal__content">
+                        <span class="detail-reveal__eyebrow">Focus Mode · 沉浸灵感</span>
+                        <p class="detail-reveal__prompt">明年今天，我在....？</p>
+                        <p class="detail-reveal__description">书页翻动的声音、键盘的敲击与窗外的微风，组成思考的节奏。这里是创作、阅读与冥想的复合空间，让灵感随时被收集。</p>
+                        <div class="detail-reveal__stats">
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🖋️</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">专注时段</span>
+                                    <span class="detail-reveal__stat-value">08:30-11:30 深度创作</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🎧</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">背景音</span>
+                                    <span class="detail-reveal__stat-value">Ambient Piano · 低频白噪</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">☕</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">灵感伴侣</span>
+                                    <span class="detail-reveal__stat-value">单品手冲 × 小块黑巧</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="timeline__node timeline__node--end">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">畅享时光</span>
-                                <span class="timeline__node-text-en">Enjoy the Time Together</span>
-                            </div>
+                        <ul class="detail-reveal__list">
+                            <li>双桌面分区：左侧写作，右侧手作与阅读</li>
+                            <li>层架收纳灵感盒，随手记录当日随想</li>
+                            <li>窗边懒人椅，思考不被局限在桌前</li>
+                        </ul>
+                        <div class="detail-reveal__cta">
+                            <button class="detail-reveal__cta-button" type="button">收藏书房布局</button>
+                            <button class="detail-reveal__cta-link" type="button">查看书房相册</button>
                         </div>
-
-                        <!-- Draggable Slider -->
-                        <div class="timeline__slider">
-                            <div class="timeline__slider-handle"></div>
-                        </div>
+                    </div>
+                    <div class="detail-reveal__gallery detail-reveal__gallery--primary">
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/study/picture1.jpg" alt="书房书桌与笔记">
+                            <figcaption class="detail-reveal__caption">沉浸书桌</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/study/picture2.jpg" alt="书架与收纳细节">
+                            <figcaption class="detail-reveal__caption">灵感层架</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/study/picture3.jpg" alt="窗边阅读角落">
+                            <figcaption class="detail-reveal__caption">窗畔阅读</figcaption>
+                        </figure>
                     </div>
                 </div>
                 
@@ -388,50 +496,77 @@
 
         <!-- Room Detail Page Container -->
         <div class="page" data-page="detail-room">
-            <div class="detail-page">
+            <div class="detail-page detail-page--reveal" data-detail="room">
                 <!-- Top Navigation -->
                 <nav class="detail-page__navigation">
                     <button class="detail-page__back-button" type="button">返回</button>
                     <h2 class="detail-page__title">房间</h2>
                 </nav>
 
-                <!-- Background Image Display Area (Two Layers for Cross-Fade) -->
-                <div class="detail-page__background-container">
-                    <div class="detail-page__background detail-page__background--layer-1">
-                        <img src="imgs/bg/room/room_bg1.jpg" alt="Room Background 1" class="detail-page__background-image">
+                <!-- Room Spotlight -->
+                <div class="detail-reveal">
+                    <div class="detail-reveal__image-wrapper">
+                        <img src="imgs/bg/room/room_bg1.jpg" alt="房间灵感" class="detail-reveal__image">
+                        <div class="detail-reveal__image-overlay">
+                            <span class="detail-reveal__badge">Cozy Haven</span>
+                            <span class="detail-reveal__tagline">属于自己的小宇宙</span>
+                        </div>
                     </div>
-                    <div class="detail-page__background detail-page__background--layer-2">
-                        <img src="imgs/bg/room/room_bg2.jpg" alt="Room Background 2" class="detail-page__background-image">
-                    </div>
+                    <button class="detail-reveal__action-button" type="button" data-reveal-trigger="room" aria-expanded="false">一键入住</button>
                 </div>
-
-                <!-- Bottom Timeline Area -->
-                <div class="detail-page__timeline">
-                    <div class="timeline">
-                        <!-- Track Line -->
-                        <div class="timeline__track"></div>
-
-                        <!-- Timeline Nodes -->
-                        <div class="timeline__node timeline__node--start">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">我们的家</span>
-                                <span class="timeline__node-text-en">Our Home</span>
+                
+                <!-- Room Inspiration Reveal -->
+                <div class="detail-reveal__panel detail-reveal__panel--featured" data-reveal-panel="room" aria-hidden="true">
+                    <div class="detail-reveal__content">
+                        <span class="detail-reveal__eyebrow">Daily Cozy · 私享时光</span>
+                        <p class="detail-reveal__prompt">明年今天，我在....？</p>
+                        <p class="detail-reveal__description">这里是放松、自处与重启的空间：一张最喜欢的椅子、一盏温柔的夜灯，还有收藏的每片记忆，将生活碎片拼成专属的舒适圈。</p>
+                        <div class="detail-reveal__stats">
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🕯️</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">舒缓氛围</span>
+                                    <span class="detail-reveal__stat-value">琥珀香 × 柔光台灯</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">🎮</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">限定时刻</span>
+                                    <span class="detail-reveal__stat-value">周末 14:00 游戏/追剧</span>
+                                </div>
+                            </div>
+                            <div class="detail-reveal__stat">
+                                <span class="detail-reveal__stat-icon">📔</span>
+                                <div class="detail-reveal__stat-text">
+                                    <span class="detail-reveal__stat-label">记录方式</span>
+                                    <span class="detail-reveal__stat-value">手帐 × 拍立得</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="timeline__node timeline__node--end">
-                            <div class="timeline__node-marker"></div>
-                            <div class="timeline__node-label">
-                                <span class="timeline__node-text">畅享时光</span>
-                                <span class="timeline__node-text-en">Enjoy the Time Together</span>
-                            </div>
+                        <ul class="detail-reveal__list">
+                            <li>床头移动小桌，睡前阅读与早餐都能实现</li>
+                            <li>墙面洞洞板展示收藏，随季节调整心情</li>
+                            <li>地毯与懒人沙发打造轻松的好友聊天角</li>
+                        </ul>
+                        <div class="detail-reveal__cta">
+                            <button class="detail-reveal__cta-button" type="button">保存房间方案</button>
+                            <button class="detail-reveal__cta-link" type="button">查看房间相册</button>
                         </div>
-
-                        <!-- Draggable Slider -->
-                        <div class="timeline__slider">
-                            <div class="timeline__slider-handle"></div>
-                        </div>
+                    </div>
+                    <div class="detail-reveal__gallery detail-reveal__gallery--primary">
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/room/picture1.jpg" alt="房间床头与台灯">
+                            <figcaption class="detail-reveal__caption">夜晚陪伴</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/room/picture2.jpg" alt="房间角落与座椅">
+                            <figcaption class="detail-reveal__caption">私享角落</figcaption>
+                        </figure>
+                        <figure class="detail-reveal__photo-card">
+                            <img src="imgs/album/room/picture3.jpg" alt="房间墙面展示">
+                            <figcaption class="detail-reveal__caption">收藏墙面</figcaption>
+                        </figure>
                     </div>
                 </div>
                 
